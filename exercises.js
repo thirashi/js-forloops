@@ -136,15 +136,15 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
 
-var oopsArray = ['turn', , 'down' , , 'for' , , 'what'];
-
-for (var i = 0; i<oopsArray.length; i++){
-	if (i%2=== 0){
-		console.log(oopsArray[i]);
-		oopsArray[i]= "nope";
-	}
-} 
+var oopsArray = [ 'turn' , , 'down' , , 'for' , , 'what' ];
 console.log(oopsArray)
+
+for (var i = 1; i < oopsArray.length; i +=2) {
+oopsArray[i] = "nope";
+	
+}
+console.log(oopsArray);
+
 
 /* 8) Is It There Oops
 Using a for-loop, iterate through the Array stored at `oopsArray` backwards. Console.log your result. It should look like this:
@@ -157,15 +157,9 @@ down
 nope
 turn
 */
-
-
-var oopsArray = [ 'turn' , , 'down' , , 'for' , , 'what' ];
-
-for (var i = 1; i < oopsArray.length; i +=2) {
-oopsArray[i] = "nope";
-	console.log(oopsArray);
+for (var i = oopsArray.length-1; i>=0; i--){
+	console.log(oopsArray[i]);
 }
-
 
 
 /* 9) Siesta Time
@@ -178,7 +172,21 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
 
+var napSchedule = [false, false, true, false, true,true];
+console.log(napSchedule);
 
+function nap(schedule){
+
+for (var i =0; i<schedule.length; i++){
+	if (schedule[i]){
+		console.log('ZzZzZzZz');
+	}
+else{
+	console.log('Gotta GEt Coding');
+}
+}
+}
+console.log(nap(napSchedule));
 
 /* 10) Copy Pasta
 Declare a variable named `valuesArray` and assign its value to be an array: `[99, 66, 829, 1941, 8, 76]`. 
