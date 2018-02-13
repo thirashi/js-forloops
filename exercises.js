@@ -90,10 +90,9 @@ for (var i = 10; i<=21; i++) {
 
  stringOfNumbers += i;
 
-
 }
-
 console.log(stringOfNumbers);
+
 /* 5) Even Stevens
 Declare a variable named `evenNumArr` and assign its value to an empty array. 
 
@@ -101,21 +100,44 @@ Write a for-loop that will push even numbers to the `evenNumArr` array. We want 
 Console.log your results.
 */
 
+var evenNumAr = [];
 
+for (var i = 0; i<50; i++){
+
+if (i%2===0){
+evenNumAr.push(i);
+}
+}
+
+console.log(evenNumAr);
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
 
 Write a for-loop that will sum up odd numbers to the `oddSum` variable. We want to add 50 odd numbers starting from 1.
 Console.log your results.
 */
-  
 
+var oddSum = 0 ;
+console.log(oddSum);
+  
+for (var i = 0; i<100; i++){
+
+if (i%2===0){
+	oddSum+=i
+}
+
+}
+
+console.log(oddSum);
 /* 7) Oops There It is
 Declare a variable named `oopsArray` and assign its to the following array: `[ 'turn' , , 'down' , , 'for' , , 'what' ]`.
 Note that every odd index value in `oopsArray` is currently `undefined`. Using a for-loop, add the string `'nope'` to every odd index. Console.log your result. It should look like this:
 
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
+
+var oopsArray = ['turn', , 'down' , , 'for' , , 'what'];
+console.log(oopsArray); 
 
 
 /* 8) Is It There Oops
