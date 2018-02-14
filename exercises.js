@@ -200,6 +200,21 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
 
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+console.log(valuesArray);
+
+var copyValuesArray = [5, 2, 3];
+console.log(copyValuesArray);
+
+
+function copyArray(originArray, destinationArray){
+
+for (var i = 0; i<originArray.length; i++){
+	console.log(destinationArray.push(originArray[i]));
+}
+return destinationArray;
+}
+console.log(copyArray(valuesArray, copyValuesArray));
 
 
 /*Final Boss*/
@@ -211,6 +226,27 @@ Write a function that will iterate through the string value and return the longe
 
 
 
+function longWord(topQuote) {
+
+var topQuote = "Artificial intelligence is no match for natural stupidity.";
+
+var split = topQuote.split(" ");
+console.log(split);
+
+
+}
+
+function longWord(str) {
+  var strSplit = str.split(' ');
+  var longWord = 0;
+  for(var i = 0; i < strSplit.length; i++){
+    if(strSplit[i].length > longWord){
+	longWord = strSplit[i];
+     }
+  }
+  return longWord;
+}
+console.log(longWord("Artificial intelligence is no match for natural stupidity."));
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
 Write a function named `generateArrayOfStrings` which takes a single argument `storage`. This function will return a new Array with only `String` values inside of it.
